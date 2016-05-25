@@ -57,7 +57,7 @@ module ExceptionNotifier
     end
 
     def enrich_message_with_backtrace(message, exception)
-      backtrace = clean_backtrace(exception).first(10).join("\n")
+      backtrace = clean_backtrace(exception).join("\n")
       [message, ['*Backtrace:*', backtrace]].join("\n")
     end
 
